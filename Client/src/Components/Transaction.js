@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { ethers } from 'ethers';
+import {ethers}  from 'ethers';
 import ErrorMessage from "./ErrorMessage";
 import TxList from "./TxList";
-import * as React from 'react';
 
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
   try {
@@ -48,7 +47,7 @@ export default function Transaction() {
           <h1 className="text-xl font-semibold text-gray-700 text-center">
             Send ETH payment
           </h1>
-          <div className="">
+          <div className="align-items-center">
             <div className="my-3">
               <input
                 type="text"
