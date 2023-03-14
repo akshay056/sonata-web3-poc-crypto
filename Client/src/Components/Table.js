@@ -51,7 +51,7 @@ function Table() {
         { field: 'Address', cellRenderer: removeRenderer, floatingFilter: true, flex: 1 },
         {
             field: 'Address', filter: true, sortable: true, flex: 1,cellRendererFramework: (param) =>
-            <button onClick={() => handleClick(param)}>send</button>
+            <button type="button" class="btn btn-primary" onClick={() => handleClick(param)}>send</button>
         },
     ]);
     // const columnDefs=[

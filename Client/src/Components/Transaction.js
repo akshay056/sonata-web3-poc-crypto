@@ -46,13 +46,13 @@ export default function Transaction() {
         <main className="mt-4 p-4">
           <h4 className="text-xl font-semibold text-gray-700 text-center">
             Send ETH payment
-          </h4>
+          </h4><br />
           <div className="align-items-center">
-            <div className="my-3">
+            <div className="my-3 ">
               <input
                 type="text"
                 name="addr"
-                className="input input-bordered block w-full focus:ring focus:outline-none"
+                className="input input-bordered col-lg-12 block w-full focus:ring focus:outline-none"
                 placeholder="Recipient Address"
               />
             </div>
@@ -60,13 +60,13 @@ export default function Transaction() {
               <input
                 name="ether"
                 type="text"
-                className="input input-bordered block w-full focus:ring focus:outline-none"
+                className="input input-bordered col-lg-12 block w-full focus:ring focus:outline-none"
                 placeholder="Amount in ETH"
               />
             </div>
           </div>
         </main>
-        <footer className="p-4">
+        <footer className="p-4 ">
           <button
             type="submit"
             className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
