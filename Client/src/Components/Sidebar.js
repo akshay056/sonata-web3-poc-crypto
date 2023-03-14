@@ -36,22 +36,22 @@ function Sidebar() {
 
                             <li className="nav-item">
                                 <Link to="/" className="remove-under-line">
-                                    <p onClick={handleLogout}>Logout</p>
+                                    <span onClick={handleLogout}>Logout</span>
                                 </Link>
                             </li>
                         </ul>
 
-                     : (location && location.pathname === "/user") ? 
+                     :(location && location.pathname === "/user") ? 
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center " id="menu">
                             <li className="nav-item">
-                                <Link to="/usernft" className="remove-under-line">
-                                    <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline"> UserNFT</span>
+                                <Link to="/user" className="remove-under-line">
+                                    <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline"> User</span>
                                 </Link>
                             </li>
 
                             <li className="nav-item">
                                 <Link to="/" className="remove-under-line">
-                                    <p onClick={handleLogout}>Logout</p>
+                                    <span onClick={handleLogout}>Logout</span>
                                 </Link>
                             </li>
                         </ul> 

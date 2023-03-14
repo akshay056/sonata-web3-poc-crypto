@@ -51,7 +51,7 @@ function Table() {
         { field: 'Address', cellRenderer: removeRenderer, floatingFilter: true, flex: 1 },
         {
             field: 'Address', filter: true, sortable: true, flex: 1,cellRendererFramework: (param) =>
-            <button onClick={() => handleClick(param)}>send</button>
+            <button type="button" class="btn btn-primary" onClick={() => handleClick(param)}>send</button>
         },
     ]);
     // const columnDefs=[
@@ -70,11 +70,11 @@ function Table() {
         <>
 
             <>
-
-                <h4 style={{ color: "" }}>Users</h4>
-                <div>
+                
+                <h4 style={{ color: "" }}>User List</h4>
+                {/* <div>
                     <button className="excel" onClick={() => onExportClick()}>Export to Excel</button>
-                </div>
+                </div> */}
 
                 <div
                     className="ag-theme-alpine"
