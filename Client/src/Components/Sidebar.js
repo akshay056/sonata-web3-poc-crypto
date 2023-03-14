@@ -2,14 +2,14 @@ import "./Sidebar.css";
 import { Link } from "react-router-dom";
 import logo from '../Assets/admin-logo.jfif';
 import sonatalogo from '../Assets/sonata-logo.png';
-//import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Sidebar() {
     function handleLogout() {
         // alert();
 
     }
-    // const location = useLocation();
+    const location = useLocation();
     // let userinfo = localStorage.getItem("user-info");
     // const obj = JSON.parse(userinfo);
     // let data = obj.data;
@@ -26,7 +26,7 @@ function Sidebar() {
                             {/* {data && data.Name} */}
                             Akshay Upadhya</span><br />
                     
-                    {/* {(location && location.pathname === "/dashboard") ? */}
+                    {(location && location.pathname === "/dashboard") ?
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center" id="menu">
                             <li className="nav-item">
                                 <Link to="/dashboard" className='remove-under-line'>
@@ -41,7 +41,7 @@ function Sidebar() {
                             </li>
                         </ul>
 
-                    {/* : (location && location.pathname === "/user") ? */}
+                     : (location && location.pathname === "/user") ? 
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center " id="menu">
                             <li className="nav-item">
                                 <Link to="/usernft" className="remove-under-line">
@@ -55,7 +55,7 @@ function Sidebar() {
                                 </Link>
                             </li>
                         </ul> 
-                    {/* : ""} */}
+                     : ""} 
                 </div>
             </div>
         </>
