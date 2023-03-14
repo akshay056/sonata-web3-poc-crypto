@@ -44,9 +44,9 @@ export default function Transaction() {
     <form className="m-4" onSubmit={handleSubmit}>
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
         <main className="mt-4 p-4">
-          <h1 className="text-xl font-semibold text-gray-700 text-center">
+          <h4 className="text-xl font-semibold text-gray-700 text-center">
             Send ETH payment
-          </h1>
+          </h4>
           <div className="align-items-center">
             <div className="my-3">
               <input
