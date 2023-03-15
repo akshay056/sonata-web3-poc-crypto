@@ -6,6 +6,7 @@ import Transaction from './Components/Transaction';
 import Dashboard from './Components/Dashboard';
 import { BrowserRouter , Route , Routes } from 'react-router-dom';
 import Landingpage from './Components/Landingpage';
+import TransactionHistory from './Components/TransactionHistory';
 
 function App() {
   return (     
@@ -18,6 +19,7 @@ function App() {
       <Route path="/pay" element={<Transaction />} />
       <Route path="/dashboard" element={<Landingpage />} />
       <Route path="/user" element={<Landingpage />} />
+      <Route path="/TransactionHistory" element={<TransactionHistory />} />
       </Route>
     </Routes>
     {/* <Login /> */}
