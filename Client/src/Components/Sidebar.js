@@ -26,11 +26,17 @@ function Sidebar() {
                             {/* {data && data.Name} */}
                             Akshay Upadhya</span><br />
                     
-                    {(location && location.pathname === "/dashboard") ?
+                    {(location && location.pathname === "/dashboard") || (location && location.pathname === "/TransactionHistory") ?
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center" id="menu">
                             <li className="nav-item">
                                 <Link to="/dashboard" className='remove-under-line'>
                                     Dashboard
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link to="/TransactionHistory" className='remove-under-line'>
+                                    Transactions
                                 </Link>
                             </li>
 

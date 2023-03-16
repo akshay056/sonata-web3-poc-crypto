@@ -12,7 +12,7 @@ function Dashboard() {
         <Card />
         <Table />
         </div>
-        {/* <Sidebar /> */}
+        
         </>
     )
 }
