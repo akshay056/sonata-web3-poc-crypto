@@ -1,8 +1,8 @@
 .bg-dark{
-    background-color: #1581e0 !important;
+    background-color: #023b6d !important;
 }
 .nav-link {
-    color: rgb(8, 8, 8);
+    color: #080808;
     text-decoration: none;
 }
 .remove-under-line{
@@ -23,7 +23,7 @@
     padding-right: 0.5rem!important;
 }
 .name{
-    color: rgb(7, 1, 1);
+    color: white;
     font-weight: 500;
     font-size: large;
 }

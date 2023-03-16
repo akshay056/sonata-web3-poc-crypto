@@ -49,28 +49,22 @@ function Card() {
 
     return (
         <>
-        <div className="App">
-        <div>
-        <button type="button" class="btn btn-secondary btn-sm" onClick={connectWallet}>
-                Connect </button><br></br>
+          <div>
+        <button type="button" class="btn btn-secondary btn-sm" style={{backgroundColor:'#023b6d'}} onClick={connectWallet}>
+                Connect wallet </button><br></br>
                 </div>
                 <br></br>
-          </div>
-            <div style={{ display: "flex" }} className="usercard">
+            <div style={{ display: "flex" }} className="usercard">             
                 <div className="card text-dark bg-i mb-3" style={{ maxWidth: "25rem", }}>
                     <div className="card-heade">
-                        <span className='usersspan'><i className='fa fa-users usersicon'></i></span>
-                    </div>
-
-
+                        <span className='usersspan'><i className='fa fa-users usersicon'></i></span>                      
+                    </div>     
                     <div className="card-footer bg-transparent border-success">
-                        <div><h4 className="card-text">WALLET ADDRESS</h4></div><br />
+                        <div><h4 className="card-text">WALLET ADDRESS:</h4></div><br />
                         <h6 className="card-title">{accountAddress}</h6>
 
                     </div>
                 </div>
-
-
                 <div className="card carduser2 card-user text-dar bg-info-2 mb-3" style={{ maxWidth: "22rem", marginLeft: "20px" }}>
                     <div className="card-heade">
                         <span className='nftsspan'>
@@ -79,9 +73,7 @@ function Card() {
                         </span>
                     </div>
                     <div class="card-footer bg-transparent border-success">
-
-
-                        <div><h4 className="card-text">WALLET BALANCE</h4></div><br />
+                        <div><h4 className="card-text">WALLET BALANCE:</h4></div><br />
                         <h6 className="card-title">{accountBalance} ETH</h6>
                     </div>
                 </div>
