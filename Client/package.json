@@ -9,6 +9,7 @@
     "ag-grid-community": "^29.1.0",
     "ag-grid-react": "^29.1.0",
     "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
     "ethers": "^5.7.2",
     "moment": "^2.29.4",
     "react": "^18.2.0",

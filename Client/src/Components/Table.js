@@ -31,7 +31,7 @@ function Table() {
     const onGridReady = (params) => {
         console.log("grid is ready");
         gridApi = params.api
-        fetch("https://mocki.io/v1/833c03d1-24a6-436c-a027-3ce624f24a55").then(resp=>resp.json())
+        fetch("https://172.29.91.71/api/home/GetAll").then(resp=>resp.json())
         .then(resp=>params.api.applyTransaction({add:resp}))
 
     }
