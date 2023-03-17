@@ -62,13 +62,11 @@ const Login = () => {
         <div className="container mt-3">
           <section className='d-flex justify-content-between'>
             <div className="left_data mt-3 p-3" style={{ width: "80%" }}>
-              <h2>About NFT Reality</h2><br />
+              <h2>About Ether Crypto</h2><br />
               <p class='fw-bold'>A perfect way to say "kudos"</p>
-              <span>Reward and incentivize employee with a digital kudos system using blockchain based NFTs . Employees earn unique ,digital tokens for outstanding work,which can be redeemed for rewards or traded in the open market.</span>
-              <p><a href="#">Read More.</a></p>
-              {/* <p class='fw-bold'>A perfect way to say "kudos"</p>
-              <p>Reward and incentivize employee with a digital kudos system using blockchain based NFTs . Employees earn unique ,digital tokens for outstanding work,which can be redeemed for rewards or traded in the open market.</p>
-              <p><a href="#">Read More.</a></p> */}
+              <span>Reward and incentivize employee with a digital kudos system , sending Ether crypto tokens.</span><br />
+              <span>Ether is the transactional token that facilitates operations on the Ethereum network. Ether is the payment users give to network participants for executing their requested operations on the network.</span>
+              <p><a href="https://ethereum.org/en/eth/">Read More..</a></p>
             </div>
 
             <div className="right_data mt-3 p-3" style={{ width: "100%" }}>
