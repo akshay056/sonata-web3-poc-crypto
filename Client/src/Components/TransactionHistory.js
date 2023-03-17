@@ -44,7 +44,7 @@ const TransactionHistory = () => {
         sortable: true,
         filter: true,
         //flex:1,
-        wrapText: true, 
+        //wrapText: true, 
         autoHeight: true,
         resizable: true
      }));

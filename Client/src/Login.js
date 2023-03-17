@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import './App.css';
 import { Form, Button } from 'react-bootstrap';
-import { Navbar,Container,Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 async function loginUser(credentials) {
   return fetch('https://172.29.91.71/api/home/login', {
     method: 'POST',
-  headers: {
-    //'Access-Control-Allow-Origin':'*' ,
+    headers: {
+      //'Access-Control-Allow-Origin':'*' ,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(credentials)
   })
     .then(data => data.json())
-    // .then(json => console.log(json))
+  // .then(json => console.log(json))
 }
 
 const Login = () => {
@@ -27,23 +27,23 @@ const Login = () => {
       email,
       password
     });
-    localStorage.setItem("user-info",JSON.stringify(response))
-    if ( response && response['status'] == 200) {
-          if(response['isAdmin'] == true) {
-          // localStorage.setItem('code', response['code']);
-          // localStorage.setItem('email', JSON.stringify(response.data.Email));
-          window.location.href="/dashboard";
-       }
-       else{
-        window.location.href="/user";
-       }
-     //navigate("/dashboard");
-       }
-    else{
-    alert("Incorrect Email/Password");
+    localStorage.setItem("user-info", JSON.stringify(response))
+    if (response && response['status'] == 200) {
+      if (response['isAdmin'] == true) {
+        // localStorage.setItem('code', response['code']);
+        // localStorage.setItem('email', JSON.stringify(response.data.Email));
+        window.location.href = "/dashboard";
+      }
+      else {
+        window.location.href = "/user";
+      }
+      //navigate("/dashboard");
+    }
+    else {
+      alert("Incorrect Email/Password");
 
     }
-    }
+  }
   /*
    const handleSubmit = (e)=>{
        e.preventDefault();

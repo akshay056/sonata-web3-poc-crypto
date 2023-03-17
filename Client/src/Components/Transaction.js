@@ -24,7 +24,12 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
   }
 };
 
-export default function Transaction() {
+export default function Transaction(rowInfo) {
+
+  // const obj = JSON.parse(rowInfo);
+  // const data = obj.data;
+  //const address = this.rowInfo.
+
   const [error, setError] = useState();
   const [txs, setTxs] = useState([]);
 
@@ -40,6 +45,10 @@ export default function Transaction() {
     });
   };
 
+  console.log("rowinfo is ",rowInfo.rowInfo[2])
+  // console.log("obj is ",obj)
+  // console.log("data is ",data)
+
   return (
     <form className="m-4" onSubmit={handleSubmit}>
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
@@ -50,10 +59,11 @@ export default function Transaction() {
           <div className="align-items-center">
             <div className="my-3 ">
               <input
-                type="text"
+                type={"text"}
                 name="addr"
                 className="input input-bordered col-lg-12 block w-full focus:ring focus:outline-none"
-                placeholder="Recipient Address"
+                
+                value={rowInfo.rowInfo[2]}
               />
             </div>
             <div className="my-3">

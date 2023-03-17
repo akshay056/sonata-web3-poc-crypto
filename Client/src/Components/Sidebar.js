@@ -10,9 +10,9 @@ function Sidebar() {
 
     }
     const location = useLocation();
-    // let userinfo = localStorage.getItem("user-info");
-    // const obj = JSON.parse(userinfo);
-    // let data = obj.data;
+    let userinfo = localStorage.getItem("user-info");
+    const obj = JSON.parse(userinfo);
+   
     return (
         <>
             <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -22,9 +22,9 @@ function Sidebar() {
                         <span >
                             {logo && <img className='image-logo' src={logo} />}
                         </span>
-                        <span className='name pt-2'>
-                            {/* {data && data.Name} */}
-                            Akshay Upadhya</span><br />
+                        <span className='name pt-1 px-2'>
+                                 {obj.firstName}&nbsp;{obj.lastName}
+                            </span><br />
                     
                     {(location && location.pathname === "/dashboard") || (location && location.pathname === "/TransactionHistory") ?
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center" id="menu">
