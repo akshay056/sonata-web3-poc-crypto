@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 import './App.css';
 import { Form, Button } from 'react-bootstrap';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
 async function loginUser(credentials) {
   return fetch('https://172.29.91.71/api/home/login', {
     method: 'POST',
     headers: {
-      //'Access-Control-Allow-Origin':'*' ,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(credentials)
   })
     .then(data => data.json())
-  // .then(json => console.log(json))
 }
 
 const Login = () => {
   const [email, setName] = useState("");
   const [password, setPassword] = useState("");
-  //const navigate=useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,39 +27,28 @@ const Login = () => {
     localStorage.setItem("user-info", JSON.stringify(response))
     if (response && response['status'] == 200) {
       if (response['isAdmin'] == true) {
-        // localStorage.setItem('code', response['code']);
-        // localStorage.setItem('email', JSON.stringify(response.data.Email));
+
         window.location.href = "/dashboard";
       }
       else {
         window.location.href = "/user";
       }
-      //navigate("/dashboard");
     }
     else {
       alert("Incorrect Email/Password");
-
     }
   }
-  /*
-   const handleSubmit = (e)=>{
-       e.preventDefault();
-       console.log(email);
-   }*/
   return (
     <><><Navbar bg="light" variant="light">
       <Container>
         <Navbar.Brand href="#home"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYaeR-i3XTeiKMy5eNtDAt29NfmgC_bRRtUBH2XHi&s'></img></Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link>Home</Nav.Link>
-        </Nav>
       </Container>
     </Navbar>
     </><>
         <div className="container mt-3">
           <section className='d-flex justify-content-between'>
             <div className="left_data mt-3 p-3" style={{ width: "80%" }}>
-              <h2>About Ether Crypto</h2><br />
+              <h2>HR Crypto Reward</h2><br />
               <p class='fw-bold'>A perfect way to say "kudos"</p>
               <span>Reward and incentivize employee with a digital kudos system , sending Ether crypto tokens.</span><br />
               <span>Ether is the transactional token that facilitates operations on the Ethereum network. Ether is the payment users give to network participants for executing their requested operations on the network.</span>

@@ -1,5 +1,3 @@
-
-//import logo from "./../Assets/Images/nftpic.png";
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import './Card.css';
@@ -7,9 +5,7 @@ import logo1 from "./../Assets/metamask.png";
 import logo2 from "./../Assets/ether.png";
 
 function Card() {
-    // const handleClick = () => {
-    //     window.open("https://opensea.io/account");
-    // }
+
   const [haveMetamask, sethaveMetamask] = useState(true);
   const [accountAddress, setAccountAddress] = useState('');
   const [accountBalance, setAccountBalance] = useState('');
@@ -29,7 +25,7 @@ function Card() {
     checkMetamaskAvailability();
   }, []);
 
-  useEffect(()=>{  connectWallet();},[])
+  useEffect(() => { connectWallet(); }, [])
 
   const connectWallet = async () => {
     try {
@@ -49,48 +45,40 @@ function Card() {
     }
   };
 
+  return (
+    <>
+      <div style={{ display: "flex" }} className="usercard">
+        <div className="card text-dark bg-i mb-3" style={{ maxWidth: "25rem", }}>
 
+          <div className="card-heade">
 
-    return (
-        <>
-          {/* <div>
-        <button type="button" class="btn btn-secondary btn-sm" style={{backgroundColor:'#023b6d'}} onClick={connectWallet}>
-                Connect wallet </button><br></br>
-                </div> */}
-               
-            <div style={{ display: "flex" }} className="usercard">             
-                <div className="card text-dark bg-i mb-3" style={{ maxWidth: "25rem", }}>
-                    
-                    <div className="card-heade">
-                        
-                        <span className='nftsspan'>
-                            
-                          { logo1 && <img className="nftimage" src={logo1} />} 
-                        </span>                      
-                    </div>     
-                    <div className="card-footer bg-transparent border-success">
+            <span className='nftsspan'>
 
-                        <div><h4 className="card-text">WALLET ADDRESS:</h4></div><br />
-                        
-                        <h6 className="card-title">{accountAddress}</h6>
+              {logo1 && <img className="nftimage" src={logo1} />}
+            </span>
+          </div>
+          <div className="card-footer bg-transparent border-success">
 
-                    </div>
-                </div>
-                <div className="card carduser2 card-user text-dar bg-info-2 mb-3" style={{ maxWidth: "22rem", marginLeft: "20px" }}>
-                    <div className="card-heade">
-                        <span className='nftsspan'>
-                            <i className='fa fa-users usersicon'></i>
-                          { logo2 && <img className="nftimage" src={logo2} />} 
-                        </span>
-                    </div>
-                    <div class="card-footer bg-transparent border-success">
-                        <div><h4 className="card-text">WALLET BALANCE:</h4></div><br />
-                        <h6 className="card-title">{accountBalance} ETH</h6>
-                    </div>
-                </div>
-            </div>
+            <div><h4 className="card-text">WALLET ADDRESS:</h4></div><br />
 
-        </>
-    )
+            <h6 className="card-title">{accountAddress}</h6>
+
+          </div>
+        </div>
+        <div className="card carduser2 card-user text-dar bg-info-2 mb-3" style={{ maxWidth: "22rem", marginLeft: "20px" }}>
+          <div className="card-heade">
+            <span className='nftsspan'>
+              <i className='fa fa-users usersicon'></i>
+              {logo2 && <img className="nftimage" src={logo2} />}
+            </span>
+          </div>
+          <div class="card-footer bg-transparent border-success">
+            <div><h4 className="card-text">WALLET BALANCE:</h4></div><br />
+            <h6 className="card-title">{accountBalance} ETH</h6>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 export default Card;

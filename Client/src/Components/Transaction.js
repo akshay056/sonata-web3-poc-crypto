@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {ethers}  from 'ethers';
+import { ethers } from 'ethers';
 import ErrorMessage from "./ErrorMessage";
 import TxList from "./TxList";
 
@@ -26,10 +26,6 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
 
 export default function Transaction(rowInfo) {
 
-  // const obj = JSON.parse(rowInfo);
-  // const data = obj.data;
-  //const address = this.rowInfo.
-
   const [error, setError] = useState();
   const [txs, setTxs] = useState([]);
 
@@ -45,10 +41,6 @@ export default function Transaction(rowInfo) {
     });
   };
 
-  console.log("rowinfo is ",rowInfo.rowInfo[2])
-  // console.log("obj is ",obj)
-  // console.log("data is ",data)
-
   return (
     <form className="m-4" onSubmit={handleSubmit}>
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
@@ -62,7 +54,6 @@ export default function Transaction(rowInfo) {
                 type={"text"}
                 name="addr"
                 className="input input-bordered col-lg-12 block w-full focus:ring focus:outline-none"
-                
                 value={rowInfo.rowInfo[2]}
               />
             </div>
@@ -79,8 +70,7 @@ export default function Transaction(rowInfo) {
         <footer className="p-4 ">
           <button
             type="submit"
-            className="btn btn-primary submit-button focus:ring focus:outline-none w-full"
-          >
+            className="btn btn-primary submit-button focus:ring focus:outline-none w-full">
             Pay now
           </button>
           <ErrorMessage message={error} />

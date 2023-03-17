@@ -1,18 +1,15 @@
 import React from "react";
-//import Sidebar from "./Sidebar";
 import Card from "./Card";
 import Table from "./Table";
 
 function Dashboard() {
-    return(
+    return (
         <>
-        <div className='maincontentdiv'>
-        <div><h4 className="header" style={{ color: "#023b6d", marginBottom: "20px" }}>HR Dashboard</h4></div>
-        
-        <Card />
-        <Table />
-        </div>
-        
+            <div className='maincontentdiv'>
+                <div><h3 className="header" style={{ color: "#023b6d", marginBottom: "20px" }}>HR Dashboard</h3></div>
+                <Card />
+                <Table />
+            </div>
         </>
     )
 }
