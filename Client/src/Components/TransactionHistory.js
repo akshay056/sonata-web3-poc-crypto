@@ -80,7 +80,7 @@ const TransactionHistory = () => {
                         });
 
                         if(findFromAddress){
-                            element.from = findFromAddress.firstName
+                            element.from = findFromAddress.firstName + " " + findFromAddress.lastName
                         };
                         
                         return element;
